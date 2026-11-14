@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="background-shape shape1"></div>
+  <div class="background-shape shape2"></div>
+
+  <main class="container">
+
+    <!-- ================= Header ================= -->
+
+    <header class="header">
+      <h1>💰 Expense Tracker</h1>
+      <p>Track and manage your daily expenses effortlessly.</p>
+    </header>
+
+    <!-- ================= Dashboard ================= -->
+
+    <section class="dashboard">
+
+      <!-- Expense Form -->
+
+      <section class="card form-card">
+
+        <h2>Add Expense</h2>
+
+        <div class="input-group">
+          <label for="n">Expense Name</label>
+          <input
+            type="text"
+            id="n"
+            placeholder="Enter expense name"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="a">Amount</label>
+          <input
+            type="number"
+            id="a"
+            placeholder="Enter amount"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="c">Category</label>
+
+          <select id="c">
+            <option>Food</option>
+            <option>Shopping</option>
+            <option>Bills</option>
+            <option>Travel</option>
+            <option>Others</option>
+          </select>
+
+        </div>
+
+        <div class="input-group">
+          <label for="d">Date</label>
+          <input type="date" id="d" />
+        </div>
+
+        <button id="ae">
+          Add Expense
+        </button>
+
+      </section>
+
+      <!-- Summary Card -->
+
+      <aside class="card summary-card">
+
+        <h2>Total Expense</h2>
+
+        <div class="total-box">
+          ₹ <span id="te">0</span>
+        </div>
+
+        <p>
+          Your total expenses will update automatically whenever you
+          add or delete an expense.
+        </p>
+
+      </aside>
+
+    </section>
+
+    <!-- ================= Expense Table ================= -->
+
+    <section class="card table-card">
+
+      <div class="table-header">
+
+        <h2>Expense History</h2>
+
+      </div>
+
+      <div class="table-wrapper">
+
+        <table>
+
+          <thead>
+
+            <tr>
+              <th>Name</th>
+              <th>Amount</th>
+              <th>Category</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+
+          </thead>
+
+          <tbody id="tb"></tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
